@@ -1,0 +1,1 @@
+import mangologo from './svgs/mangologo.svg';
