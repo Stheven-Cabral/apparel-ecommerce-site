@@ -9,6 +9,7 @@ const logoContainer = css`
   display: flex;
   justify-content: center;
   position: relative;
+  background-color: #F2F2F2;
 `;
 
 const mangoLogoStyle = css`
@@ -36,7 +37,6 @@ const apparelName = css`
   font-family: 'Kaushan Script', cursive;
   position: absolute;
   top: 600px;
-  left: 480px;
 `
 
 const apparelName2 = css`
