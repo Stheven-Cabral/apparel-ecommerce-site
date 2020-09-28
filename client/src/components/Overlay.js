@@ -10,6 +10,7 @@ const logoContainer = css`
   justify-content: center;
   position: relative;
   background-color: #F2F2F2;
+  margin: 0;
 `;
 
 const mangoLogoStyle = css`
@@ -35,8 +36,10 @@ const mangoLogoOrangeStyle = css`
 const apparelName = css`
   font-size: 6.5rem;
   font-family: 'Kaushan Script', cursive;
-  position: absolute;
-  top: 600px;
+  margin: 0;
+  padding-top: 690px;
+  padding-right: 100px;
+  ${'' /* top: 610px; */}
 `
 
 const apparelName2 = css`
@@ -49,7 +52,7 @@ const Overlay = () => {
       <div className={logoContainer}>
         <img className={mangoLogoStyle} src={mangologo} alt="Wild Mango Logo"/>
         <img className={mangoLogoOrangeStyle} src={mangologoOrange} alt="Wild Mango Logo"/>
-        <h1 className={apparelName}>Wild<span className={apparelName2}>&nbsp;Mango</span>&nbsp;Apparel</h1>
+        <h1 className={apparelName}>Wild&nbsp;<span className={apparelName2}>&nbsp;Mangoes</span></h1>
       </div>
     </React.Fragment>
   )
