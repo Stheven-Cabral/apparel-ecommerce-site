@@ -8,16 +8,15 @@ import 'animate.css';
 const logoContainer = css`
   display: flex;
   justify-content: center;
-  background-color: #F2F2F2;
   margin: 0;
-  height: 100vh;
+  height: 100%;
 `;
 
 const mangoLogoStyle = css`
   width: 40rem;
   height: auto;
   margin-top: 55px;
-  padding-left: 15px;
+  padding-left: 25px;
   animation: pulse;
   animation-duration: 1s;
   animation-iteration-count: infinite;
@@ -29,7 +28,7 @@ const mangoLogoOrangeStyle = css`
   width: 40rem;
   height: auto;
   margin-top: 55px;
-  padding-left: 15px;
+  padding-left: 25px;
   animation: bounceIn;
   animation-duration: 5s;
   position: absolute;
@@ -37,11 +36,12 @@ const mangoLogoOrangeStyle = css`
   z-index: 1;
 `
 const apparelName = css`
+  height: 150px;
   font-size: 6.5rem;
   font-family: 'Kaushan Script', cursive;
   margin: 0;
   padding-top: 690px;
-  padding-right: 100px;
+  padding-right: 25px;
 `
 
 const apparelName2 = css`
