@@ -1,18 +1,22 @@
+/** @jsx jsx */
+import { jsx, css } from '@emotion/core'
 import React from 'react';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 // import mangologo from '../svgs/mangologo.svg';
-// import mangologoOrange from '../svgs/mangologo-orange.svg';
-// import { css } from 'emotion';
-import 'animate.css';
+// import 'animate.css';
 
-const Home = () => {
+const NavBar = () => {
   return(
     <React.Fragment>
-      <div>
-        <h1>Home</h1>
+      <div className="home-header">
+        <nav className="nav-bar">
+          <Link to="/home">
+            <h1>Wild Mangoes</h1>
+          </Link>
+        </nav>
       </div>
     </React.Fragment>
   )
 }
 
-export default Home;
+export default NavBar;

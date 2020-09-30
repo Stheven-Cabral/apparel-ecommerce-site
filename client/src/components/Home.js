@@ -4,10 +4,12 @@ import React from 'react';
 // import mangologoOrange from '../svgs/mangologo-orange.svg';
 // import { css } from 'emotion';
 import 'animate.css';
+import NavBar from './NavBar';
 
 const Home = () => {
   return(
     <React.Fragment>
+      <NavBar />
       <div>
         <h1>Home</h1>
       </div>
