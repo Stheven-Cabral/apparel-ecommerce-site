@@ -18,7 +18,7 @@ const Home = () => {
   return(
     <React.Fragment>
       <NavBar />
-      <Container css={containerStyles} fluid>
+      <Container css={containerStyles}>
         <Row>
           <Col><h1>Home</h1></Col>
           <Col><h1>History</h1></Col>
