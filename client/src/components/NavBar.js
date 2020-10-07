@@ -30,18 +30,19 @@ const textStyle = css`
   text-align: center;
 `;
 
-// const mangoesStyle = css`
-//   color: #ffc42e;
-// `;
+const mangoesStyle = css`
+  color: #ffc42e;
+`;
 
 const NavigationBar = () => {
   return(
     <React.Fragment>
       <Container fluid>
         <NavBar bg="dark">
-          <NavBar.Brand><h1 css={textStyle}>Wild</h1> Mangoes</NavBar.Brand>
+          <NavBar.Brand><h1 css={textStyle}>Wild<span css={mangoesStyle}>&nbsp;Mangoes</span></h1></NavBar.Brand>
         </NavBar>
       </Container>
+      
       {/* <nav className="nav-bar" css={navBarStyle}>
         <Link to="/home" css={textLinkStyle}>
           <h1 css={textStyle}>Wild<span css={mangoesStyle}>&nbsp;Mangoes</span></h1>
