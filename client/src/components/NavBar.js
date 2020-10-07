@@ -24,7 +24,7 @@ const textStyle = css`
   margin: 0;
   height: 60px;
   line-height: 60px;
-  font-size: 1.5em;
+  font-size: 1.2em;
   font-family: 'Kaushan Script', cursive;
   color: #f8f8f8;
   text-align: center;
@@ -42,7 +42,7 @@ const NavigationBar = () => {
           <NavBar.Brand><h1 css={textStyle}>Wild<span css={mangoesStyle}>&nbsp;Mangoes</span></h1></NavBar.Brand>
         </NavBar>
       </Container>
-      
+
       {/* <nav className="nav-bar" css={navBarStyle}>
         <Link to="/home" css={textLinkStyle}>
           <h1 css={textStyle}>Wild<span css={mangoesStyle}>&nbsp;Mangoes</span></h1>
