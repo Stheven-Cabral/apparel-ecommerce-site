@@ -3,7 +3,7 @@ import { jsx, css } from '@emotion/core';
 import React from 'react';
 // import { Link } from 'react-router-dom';
 // import 'animate.css';
-import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
 import NavBar from 'react-bootstrap/NavBar';
 // import Row from 'react-bootstrap/Row';
 // import Col from 'react-bootstrap/Col';
@@ -37,11 +37,10 @@ const mangoesStyle = css`
 const NavigationBar = () => {
   return(
     <React.Fragment>
-      <Container fluid>
-        <NavBar bg="dark">
-          <NavBar.Brand><h1 css={textStyle}>Wild<span css={mangoesStyle}>&nbsp;Mangoes</span></h1></NavBar.Brand>
-        </NavBar>
-      </Container>
+      <Nav></Nav>
+      <NavBar bg="dark">
+        <NavBar.Brand><h1 css={textStyle}>Wild<span css={mangoesStyle}>&nbsp;Mangoes</span></h1></NavBar.Brand>
+      </NavBar>
 
       {/* <nav className="nav-bar" css={navBarStyle}>
         <Link to="/home" css={textLinkStyle}>
