@@ -1,23 +1,24 @@
 /** @jsx jsx */
 import { jsx, css } from '@emotion/core';
 import React from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 // import 'animate.css';
 import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
+import NavBar from 'react-bootstrap/NavBar';
+// import Row from 'react-bootstrap/Row';
+// import Col from 'react-bootstrap/Col';
 
-const navBarStyle = css`
-  height: 60px;
-  background-color: rgb(24, 24, 24);
-`;
+// const navBarStyle = css`
+//   height: 60px;
+//   background-color: rgb(24, 24, 24);
+// `;
 
-const textLinkStyle = css`
-  text-decoration: none;
-  display: flex;
-  margin-left: 20px;
-  height: 100%;
-`;
+// const textLinkStyle = css`
+//   text-decoration: none;
+//   display: flex;
+//   margin-left: 20px;
+//   height: 100%;
+// `;
 
 const textStyle = css`
   margin: 0;
@@ -29,20 +30,25 @@ const textStyle = css`
   text-align: center;
 `;
 
-const mangoesStyle = css`
-  color: #ffc42e;
-`;
+// const mangoesStyle = css`
+//   color: #ffc42e;
+// `;
 
-const NavBar = () => {
+const NavigationBar = () => {
   return(
     <React.Fragment>
-      <nav className="nav-bar" css={navBarStyle}>
+      <Container fluid>
+        <NavBar bg="dark">
+          <NavBar.Brand><h1 css={textStyle}>Wild</h1> Mangoes</NavBar.Brand>
+        </NavBar>
+      </Container>
+      {/* <nav className="nav-bar" css={navBarStyle}>
         <Link to="/home" css={textLinkStyle}>
           <h1 css={textStyle}>Wild<span css={mangoesStyle}>&nbsp;Mangoes</span></h1>
         </Link>
-      </nav>
+      </nav> */}
     </React.Fragment>
   )
 }
 
-export default NavBar;
+export default NavigationBar;

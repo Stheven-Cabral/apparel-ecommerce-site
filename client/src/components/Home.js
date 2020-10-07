@@ -5,7 +5,7 @@ import { jsx, css } from '@emotion/core';import React from 'react';
 // import mangologo from '../svgs/mangologo.svg';
 // import mangologoOrange from '../svgs/mangologo-orange.svg';
 import 'animate.css';
-import NavBar from './NavBar';
+import NavigationBar from './NavBar';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -17,7 +17,7 @@ const containerStyles = css`
 const Home = () => {
   return(
     <React.Fragment>
-      <NavBar />
+      <NavigationBar />
       <Container css={containerStyles}>
         <Row>
           <Col><h1>Home</h1></Col>
