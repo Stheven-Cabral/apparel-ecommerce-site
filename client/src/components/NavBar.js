@@ -42,18 +42,13 @@ const toggleStyle = css`
   height: 45px;
   width: 45px;
   transition: all .2s ease;
-  outline: none;
   &:hover {
-    outline: none;
     background-color: #ffc42e;
     border: 2px solid #1F1F1F;
     border-radius: 10%;
   }
   &:focus {
-    border: none;
-  }
-  &:visited {
-    border: none;
+    outline: 0;
   }
 `;
 
