@@ -3,3 +3,11 @@
   color: rgb(24, 24, 24);
   margin: 0;
 } */
+
+#toggle-style {
+  border-color: white;
+  color: white;
+  background-image: '';
+  background-image: url('svgs/mangologo-orange.svg');
+}
+
