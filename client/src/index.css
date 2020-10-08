@@ -4,10 +4,3 @@
   margin: 0;
 } */
 
-#toggle-style {
-  border-color: none;
-  background-image: "";
-  background-image: url('svgs/toggle.svg');
-  background-repeat: no-repeat;
-}
-

@@ -1,8 +1,10 @@
 /** @jsx jsx */
 import { jsx, css } from '@emotion/core';
+import { Link } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
 import NavBar from 'react-bootstrap/NavBar';
-import toggle from '../svgs/toggle.svg'
+import toggle from '../svgs/toggle.svg';
+import 'animate.css';
 // import Nav from 'react-bootstrap/Nav';
 
 const containerStyle = css`
@@ -13,13 +15,13 @@ const navBarStyle = css`
   width: 100%;
   height: 65px;
   position: absolute;
-  z-index: 1;
+  z-index: 2;
   background-color: #1F1F1F;
 `;
 
 const brandStyle = css`
   position: absolute;
-  z-index: 2;
+  z-index: 3;
   top: 10;
   margin-left: 25%;
 `;
@@ -53,6 +55,30 @@ const toggleButtonStyle = css`
   transform: scale(1.2);
 `;
 
+const navLinksStyle = css`
+  width: 100%;
+  height: 200px;
+  padding-top: 50px;
+  background-color: #1F1F1F;
+  position: absolute;
+  left: 0px; 
+  top: 50px;
+  animation: slideInLeft;
+  animation-duration: 1s;
+  z-index: 1;
+`;
+
+const listStyle = css`
+  list-style: none;
+  padding: 0px;
+`;
+
+const linkStyle = css`
+  font-family: 'Bebas Neue', cursive;
+  padding: 2.5px 0px;
+  color: white;
+`;
+
 const mangoesStyle = css`
   color: #ffc42e;
 `;
@@ -61,18 +87,16 @@ const mangoesStyle = css`
 const NavigationBar = () => {
   return(
     <Container fluid css={containerStyle} className="">
-      <NavBar expand="sm" variant="dark" css={navBarStyle} >
+      <NavBar variant="dark" css={navBarStyle} >
         <button css={toggleStyle}><img css={toggleButtonStyle} src={toggle} alt="toggle button"/></button>
-        {/* <NavBar.Toggle aria-controls="basic-navbar-nav" className="" id="toggle-style"/>
-        <NavBar.Collapse>
-          <Nav className="text-light">
-            <Nav.Item><Nav.Link className={navLinkClasses} href="/home">Home</Nav.Link></Nav.Item>
-            <Nav.Item><Nav.Link className={navLinkClasses} href="/about">About</Nav.Link></Nav.Item>
-            <Nav.Item><Nav.Link className={navLinkClasses} href="/designs">Designs</Nav.Link></Nav.Item>
-            <Nav.Item><Nav.Link className={navLinkClasses} href="/shop">Shop</Nav.Link></Nav.Item>
-            <Nav.Item><Nav.Link className={navLinkClasses} href="/contact">Contact</Nav.Link></Nav.Item>
-          </Nav>
-        </NavBar.Collapse> */}
+        <div css={navLinksStyle}>
+          <ul css={listStyle}>
+            <li className="text-center"><Link css={linkStyle}>HOME</Link></li>
+            <li className="text-center"><Link css={linkStyle}>ABOUT</Link></li>
+            <li className="text-center"><Link css={linkStyle}>DESIGNS</Link></li>
+            <li className="text-center"><Link css={linkStyle}>SHOP</Link></li>
+          </ul>
+        </div>
       </NavBar>
       <div css={brandStyle}><h1 css={textStyle}>Wild<span css={mangoesStyle}>&nbsp;Mangoes</span></h1></div>
     </Container>
