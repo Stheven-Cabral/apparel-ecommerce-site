@@ -2,7 +2,6 @@
 import { jsx, css } from '@emotion/core';
 import Container from 'react-bootstrap/Container';
 import NavBar from 'react-bootstrap/NavBar';
-import Button from 'react-bootstrap/Button';
 import toggle from '../svgs/toggle.svg'
 // import Nav from 'react-bootstrap/Nav';
 
@@ -12,8 +11,10 @@ const containerStyle = css`
 
 const navBarStyle = css`
   width: 100%;
+  height: 65px;
   position: absolute;
   z-index: 1;
+  background-color: #1F1F1F;
 `;
 
 const brandStyle = css`
@@ -32,17 +33,24 @@ const textStyle = css`
   color: #f8f8f8;
 `;
 
-// const navLinkClasses = `text-light`;
-
 const toggleStyle = css`
-  background-color: black;
-  border-color: black;
-  height: 50px;
-  width: 50px;
+  background-color: #1F1F1F;
+  border: none;
+  height: 45px;
+  width: 45px;
+  transition: all .2s ease;
+  &:hover,
+  &:focus {
+    background-color: #ffc42e;
+    border: 2px solid white;
+    border-radius: 10%;
+    outline: 0;
+  }
 `;
 
 const toggleButtonStyle = css`
-  transform: scale(1.5);
+  width: 25px;
+  transform: scale(1.2);
 `;
 
 const mangoesStyle = css`
@@ -53,8 +61,8 @@ const mangoesStyle = css`
 const NavigationBar = () => {
   return(
     <Container fluid css={containerStyle} className="">
-      <NavBar expand="sm" bg="dark" variant="dark" css={navBarStyle} >
-        <Button css={toggleStyle}><img css={toggleButtonStyle} src={toggle} alt="toggle button"/></Button>
+      <NavBar expand="sm" variant="dark" css={navBarStyle} >
+        <button css={toggleStyle}><img css={toggleButtonStyle} src={toggle} alt="toggle button"/></button>
         {/* <NavBar.Toggle aria-controls="basic-navbar-nav" className="" id="toggle-style"/>
         <NavBar.Collapse>
           <Nav className="text-light">
