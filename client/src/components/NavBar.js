@@ -70,6 +70,20 @@ const navLinksStyle = css`
   z-index: 1;
 `;
 
+const navLinksStyleHidden = css`
+  visibility: hidden;
+  width: 100%;
+  height: 200px;
+  padding-top: 50px;
+  background-color: #1F1F1F;
+  position: absolute;
+  left: 0px; 
+  top: 60px;
+  animation: slideOutUp;
+  animation-duration: 1s;
+  z-index: 1;
+`;
+
 const listStyle = css`
   display: block;
   list-style: none;
@@ -98,7 +112,7 @@ const NavigationBar = () => {
     <Container fluid css={containerStyle} className="">
       <NavBar variant="dark" css={navBarStyle} >
         <button css={toggleStyle} onClick={toggleNavVisibility}><img css={toggleButtonStyle} src={toggle} alt="toggle button"/></button>
-        <div css={visibleNav ? navLinksStyle : null}>
+        <div css={visibleNav ? navLinksStyle : navLinksStyleHidden}>
           <ul css={visibleNav ? listStyle : hiddenListStyle}>
             <li className="text-center"><Link css={linkStyle}>HOME</Link></li>
             <li className="text-center"><Link css={linkStyle}>ABOUT</Link></li>
