@@ -44,22 +44,24 @@ const textStyle = css`
   text-align: center;
 `;
 
+const navLinkClasses = `text-light`;
+
 const mangoesStyle = css`
   color: #ffc42e;
 `;
 
 const NavigationBar = () => {
   return(
-    <Container fluid css={containerStyle}>
-      <NavBar expand="lg" bg="dark" css={navBarStyle}>
+    <Container fluid css={containerStyle} className="">
+      <NavBar expand="lg" bg="dark" css={navBarStyle} >
         <NavBar.Toggle aria-controls="basic-navbar-nav" />
         <NavBar.Collapse>
-          <Nav>
-            <Nav.Item><Nav.Link href="/home">Home</Nav.Link></Nav.Item>
-            <Nav.Item><Nav.Link href="/about">About</Nav.Link></Nav.Item>
-            <Nav.Item><Nav.Link href="/designs">Designs</Nav.Link></Nav.Item>
-            <Nav.Item><Nav.Link href="/shop">Shop</Nav.Link></Nav.Item>
-            <Nav.Item><Nav.Link href="/contact">Contact</Nav.Link></Nav.Item>
+          <Nav className="text-light">
+            <Nav.Item><Nav.Link className={navLinkClasses} href="/home">Home</Nav.Link></Nav.Item>
+            <Nav.Item><Nav.Link className={navLinkClasses} href="/about">About</Nav.Link></Nav.Item>
+            <Nav.Item><Nav.Link className={navLinkClasses} href="/designs">Designs</Nav.Link></Nav.Item>
+            <Nav.Item><Nav.Link className={navLinkClasses} href="/shop">Shop</Nav.Link></Nav.Item>
+            <Nav.Item><Nav.Link className={navLinkClasses} href="/contact">Contact</Nav.Link></Nav.Item>
           </Nav>
         </NavBar.Collapse>
       </NavBar>
