@@ -1,5 +1,6 @@
 /** @jsx jsx */
 import { jsx, css } from '@emotion/core';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
 import NavBar from 'react-bootstrap/NavBar';
@@ -41,12 +42,18 @@ const toggleStyle = css`
   height: 45px;
   width: 45px;
   transition: all .2s ease;
-  &:hover,
-  &:focus {
+  outline: none;
+  &:hover {
+    outline: none;
     background-color: #ffc42e;
-    border: 2px solid white;
+    border: 2px solid #1F1F1F;
     border-radius: 10%;
-    outline: 0;
+  }
+  &:focus {
+    border: none;
+  }
+  &:visited {
+    border: none;
   }
 `;
 
@@ -62,15 +69,20 @@ const navLinksStyle = css`
   background-color: #1F1F1F;
   position: absolute;
   left: 0px; 
-  top: 50px;
+  top: 60px;
   animation: slideInLeft;
   animation-duration: 1s;
   z-index: 1;
 `;
 
 const listStyle = css`
+  display: block;
   list-style: none;
   padding: 0px;
+`;
+
+const hiddenListStyle = css`
+  display: none;
 `;
 
 const linkStyle = css`
@@ -85,12 +97,14 @@ const mangoesStyle = css`
 
 
 const NavigationBar = () => {
+  const [visibleNav, setNavVisible] = useState(false);
+
   return(
     <Container fluid css={containerStyle} className="">
       <NavBar variant="dark" css={navBarStyle} >
-        <button css={toggleStyle}><img css={toggleButtonStyle} src={toggle} alt="toggle button"/></button>
-        <div css={navLinksStyle}>
-          <ul css={listStyle}>
+        <button css={toggleStyle} onClick={toggleNavVisibility}><img css={toggleButtonStyle} src={toggle} alt="toggle button"/></button>
+        <div css={visibleNav ? navLinksStyle : null}>
+          <ul css={visibleNav ? listStyle : hiddenListStyle}>
             <li className="text-center"><Link css={linkStyle}>HOME</Link></li>
             <li className="text-center"><Link css={linkStyle}>ABOUT</Link></li>
             <li className="text-center"><Link css={linkStyle}>DESIGNS</Link></li>
@@ -101,6 +115,14 @@ const NavigationBar = () => {
       <div css={brandStyle}><h1 css={textStyle}>Wild<span css={mangoesStyle}>&nbsp;Mangoes</span></h1></div>
     </Container>
   )
+
+  function toggleNavVisibility() {
+    if (visibleNav === false) {
+      setNavVisible(true);
+    } else {
+      setNavVisible(false);
+    }
+  }
 }
 
 export default NavigationBar;
