@@ -1,12 +1,12 @@
 /** @jsx jsx */
 import { jsx, css } from '@emotion/core';
+import styled from '@emotion/styled';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
 import NavBar from 'react-bootstrap/NavBar';
 import toggle from '../svgs/toggle.svg';
 import 'animate.css';
-// import Nav from 'react-bootstrap/Nav';
 
 const containerStyle = css`
   padding: 0;
@@ -48,7 +48,7 @@ const toggleStyle = css`
     border-radius: 10%;
   }
   &:focus {
-    outline: 0;
+    outline: none;
   }
 `;
 
@@ -57,7 +57,7 @@ const toggleButtonStyle = css`
   transform: scale(1.2);
 `;
 
-const navLinksStyle = css`
+const NavLinksContainer = styled.div`
   width: 100%;
   height: 200px;
   padding-top: 50px;
@@ -65,33 +65,15 @@ const navLinksStyle = css`
   position: absolute;
   left: 0px; 
   top: 60px;
-  animation: slideInLeft;
-  animation-duration: 1s;
+  transform: ${({visibleNav}) => visibleNav ? 'translateX(0%)' : 'translateX(-100%)'};
+  transition: transform .3s ease;
   z-index: 1;
 `;
 
-const navLinksStyleHidden = css`
-  visibility: hidden;
-  width: 100%;
-  height: 200px;
-  padding-top: 50px;
-  background-color: #1F1F1F;
-  position: absolute;
-  left: 0px; 
-  top: 60px;
-  animation: slideOutUp;
-  animation-duration: 1s;
-  z-index: 1;
-`;
-
-const listStyle = css`
-  display: block;
+const UnorderedList = styled.ul`
+  display: ${({visibleNav}) => visibleNav ? 'block' : 'none'};
   list-style: none;
   padding: 0px;
-`;
-
-const hiddenListStyle = css`
-  display: none;
 `;
 
 const linkStyle = css`
@@ -112,14 +94,14 @@ const NavigationBar = () => {
     <Container fluid css={containerStyle} className="">
       <NavBar variant="dark" css={navBarStyle} >
         <button css={toggleStyle} onClick={toggleNavVisibility}><img css={toggleButtonStyle} src={toggle} alt="toggle button"/></button>
-        <div css={visibleNav ? navLinksStyle : navLinksStyleHidden}>
-          <ul css={visibleNav ? listStyle : hiddenListStyle}>
+        <NavLinksContainer visibleNav={visibleNav}>
+          <UnorderedList visibleNav={visibleNav}>
             <li className="text-center"><Link css={linkStyle}>HOME</Link></li>
             <li className="text-center"><Link css={linkStyle}>ABOUT</Link></li>
             <li className="text-center"><Link css={linkStyle}>DESIGNS</Link></li>
             <li className="text-center"><Link css={linkStyle}>SHOP</Link></li>
-          </ul>
-        </div>
+          </UnorderedList>
+        </NavLinksContainer>
       </NavBar>
       <div css={brandStyle}><h1 css={textStyle}>Wild<span css={mangoesStyle}>&nbsp;Mangoes</span></h1></div>
     </Container>
