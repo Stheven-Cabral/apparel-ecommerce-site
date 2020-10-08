@@ -6,24 +6,19 @@ import { jsx, css } from '@emotion/core';import React from 'react';
 // import mangologoOrange from '../svgs/mangologo-orange.svg';
 import 'animate.css';
 import NavigationBar from './NavBar';
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
+// import Container from 'react-bootstrap/Container';
 
-const containerStyles = css`
-  background-color: blue;
-`;
+
+// const containerStyles = css`
+//   background-color: blue;
+// `;
 
 const Home = () => {
   return(
     <React.Fragment>
       <NavigationBar />
-      <Container css={containerStyles}>
-        <Row>
-          <Col><h1>Home</h1></Col>
-          <Col><h1>History</h1></Col>
-        </Row>
-      </Container>
+      {/* <Container css={containerStyles}> */}
+      {/* </Container> */}
     </React.Fragment>
   )
 }
