@@ -6,10 +6,12 @@ import { Link } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
 import NavBar from 'react-bootstrap/NavBar';
 import toggle from '../svgs/toggle.svg';
+import shoppingCart from '../svgs/shopping-cart.svg';
 import 'animate.css';
 
 const containerStyle = css`
   padding: 0;
+  position: relative;
 `;
 
 const navBarStyle = css`
@@ -23,15 +25,16 @@ const navBarStyle = css`
 const brandStyle = css`
   position: absolute;
   z-index: 3;
-  top: 10;
-  margin-left: 25%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-60%);
 `;
 
 const textStyle = css`
   line-height: 60px;
   margin-block-start: 0;
   margin-block-end: 0;
-  font-size: 1.2em;
+  font-size: 1.7em;
   font-family: 'Kaushan Script', cursive;
   color: #f8f8f8;
 `;
@@ -67,7 +70,6 @@ const NavLinksContainer = styled.div`
   top: 60px;
   transform: ${({visibleNav}) => visibleNav ? 'translateX(0%)' : 'translateX(-100%)'};
   transition: transform .3s ease;
-  z-index: 1;
 `;
 
 const UnorderedList = styled.ul`
@@ -84,6 +86,15 @@ const linkStyle = css`
 
 const mangoesStyle = css`
   color: #ffc42e;
+`;
+
+const shoppingCartButtonStyle = css`
+  background-color: #1F1F1F;
+  border: none;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  z-index: 4;
 `;
 
 
@@ -104,6 +115,7 @@ const NavigationBar = () => {
         </NavLinksContainer>
       </NavBar>
       <div css={brandStyle}><h1 css={textStyle}>Wild<span css={mangoesStyle}>&nbsp;Mangoes</span></h1></div>
+      <button css={shoppingCartButtonStyle}><img src={shoppingCart} alt="Shopping Cart"/></button>
     </Container>
   )
 
