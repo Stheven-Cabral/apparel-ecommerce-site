@@ -5,9 +5,9 @@
 } */
 
 #toggle-style {
-  border-color: white;
-  color: white;
-  background-image: '';
-  background-image: url('svgs/mangologo-orange.svg');
+  border-color: none;
+  background-image: "";
+  background-image: url('svgs/toggle.svg');
+  background-repeat: no-repeat;
 }
 
