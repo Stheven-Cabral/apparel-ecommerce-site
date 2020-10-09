@@ -1,20 +1,33 @@
 /** @jsx jsx */
 import React from 'react';
-import Mangoes from '../images/mango-hero-bg.png';
 import MangoesMobile from '../images/mango-hero-bg-mobile.png';
-import { jsx } from '@emotion/core';
+import Mangoes from '../images/mango-hero-bg.png';
+import { jsx, css } from '@emotion/core';
 import Image from 'react-bootstrap/Image';
 
-// const heroStyle = css`
-//   width: 100vw;
-// `;
+
+const heroStyleMobile = css`
+  width: 100vw;
+  @media(min-width: 576px) {
+    display: none;
+  }
+`;
+
+const heroStyle = css`
+  display: none;
+  width: 100vw;
+  @media(min-width: 576px) {
+    display: block;
+  }
+`;
 
 
 const Hero = () => {
 
   return(
     <React.Fragment>
-      <Image sizes="(max-width: 500px) 100vw, (max-width: 900px) 50vw, 800px" srcSet={`${MangoesMobile} 500w, ${Mangoes} 800w`} alt="Collection of Mangoes" fluid></Image>
+      <Image css={heroStyleMobile} src={MangoesMobile} alt="Collection of Mangoes" fluid></Image>
+      <Image css={heroStyle} src={Mangoes} alt="Collection of Mangoes" fluid></Image>
     </React.Fragment>
   )
 }

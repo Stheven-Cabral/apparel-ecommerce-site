@@ -11,6 +11,7 @@ import shoppingCart from '../svgs/shopping-cart.svg';
 
 /** Navigation Bar Component Styling */
 const containerStyle = css`
+  max-width: 1200px;
   padding: 0;
   position: sticky;
   top: 0;

@@ -21,8 +21,6 @@ const Home = () => {
       {/* <Container css={containerStyles}> */}
       {/* </Container> */}
       <Hero />
-      <Hero />
-      <Hero />
     </React.Fragment>
   )
 }
