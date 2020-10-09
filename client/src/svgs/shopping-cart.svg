@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
   <g>
-    <path style="stroke: rgb(0, 0, 0); fill: none; stroke-width: 20px;" d="M 145.174 145.292 C 145.174 145.292 148.944 35.657 241.468 35.517 C 345.826 35.359 346.749 144.65 346.749 144.65 L 145.174 145.292 Z"/>
-    <rect x="41.177" y="145.293" width="411.495" height="263.203" style="stroke: rgb(0, 0, 0); stroke-miterlimit: 1; stroke-linejoin: bevel; stroke-width: 20px; fill: none;" rx="50.715" ry="50.715"/>
+    <path style="fill: none; stroke: rgb(243, 221, 25); stroke-width: 25px;" d="M 145.174 145.292 C 145.174 145.292 148.944 35.657 241.468 35.517 C 345.826 35.359 346.749 144.65 346.749 144.65 L 145.174 145.292 Z"/>
+    <rect x="41.177" y="145.293" width="411.495" height="263.203" style="stroke-miterlimit: 1; stroke-linejoin: bevel; fill: none; stroke: rgb(243, 221, 25); stroke-width: 25px;" rx="50.715" ry="50.715"/>
   </g>
 </svg>
