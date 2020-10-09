@@ -12,7 +12,8 @@ import shoppingCart from '../svgs/shopping-cart.svg';
 /** Navigation Bar Component Styling */
 const containerStyle = css`
   padding: 0;
-  position: relative;
+  position: sticky;
+  top: 0;
 `;
 
 const navBarStyle = css`
