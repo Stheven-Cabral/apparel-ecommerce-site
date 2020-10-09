@@ -87,7 +87,9 @@ const UnorderedList = styled.ul`
   list-style: none;
   padding: 0px;
   @media (min-width: 992px) {
-    background-color: blue;
+    position: absolute;
+    top: 20px;
+    background-color: transparent;
   }
 `;
 
@@ -95,9 +97,8 @@ const linkStyle = css`
   font-family: 'Bebas Neue', cursive;
   padding: 2.5px 0px;
   color: white;
-  @media (min-width: 992px) {
-    padding: 0;
-    margin: 0;
+  &:hover {
+    color: #f3dd19;
   }
 `;
 
@@ -121,7 +122,7 @@ const NavigationBar = () => {
   const [visibleNav, setNavVisible] = useState(false);
 
   return(
-    <Container fluid css={containerStyle} className="">
+    <Container fluid css={containerStyle} >
       <NavBar variant="dark" css={navBarStyle} >
         <button css={toggleStyle} onClick={toggleNavVisibility}><img css={toggleButtonStyle} src={toggle} alt="toggle button"/></button>
         <NavLinksContainer visibleNav={visibleNav}>

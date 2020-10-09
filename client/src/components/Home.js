@@ -6,6 +6,7 @@ import { jsx } from '@emotion/core';import React from 'react';
 // import mangologoOrange from '../svgs/mangologo-orange.svg';
 import 'animate.css';
 import NavigationBar from './NavBar';
+import Hero from './Hero';
 // import Container from 'react-bootstrap/Container';
 
 
@@ -19,6 +20,9 @@ const Home = () => {
       <NavigationBar />
       {/* <Container css={containerStyles}> */}
       {/* </Container> */}
+      <Hero />
+      <Hero />
+      <Hero />
     </React.Fragment>
   )
 }
