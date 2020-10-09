@@ -97,7 +97,7 @@ const UnorderedList = styled.ul`
 
 const linkStyle = css`
   font-family: 'Bebas Neue', cursive;
-  padding: 2.5px 0px;
+  padding: 2px 0px;
   color: white;
   &:hover {
     color: #f3dd19;
@@ -129,10 +129,10 @@ const NavigationBar = () => {
         <button css={toggleStyle} onClick={toggleNavVisibility}><img css={toggleButtonStyle} src={toggle} alt="toggle button"/></button>
         <NavLinksContainer visibleNav={visibleNav}>
           <UnorderedList visibleNav={visibleNav} className="d-lg-flex">
-            <li className="text-center text-lg-left mx-lg-3"><Link css={linkStyle}>HOME</Link></li>
-            <li className="text-center text-lg-left mx-lg-3"><Link css={linkStyle}>ABOUT</Link></li>
-            <li className="text-center text-lg-left mx-lg-3"><Link css={linkStyle}>DESIGNS</Link></li>
-            <li className="text-center text-lg-left mx-lg-3"><Link css={linkStyle}>SHOP</Link></li>
+            <li className="h5 text-center text-lg-left mx-lg-3"><Link css={linkStyle}>HOME</Link></li>
+            <li className="h5 text-center text-lg-left mx-lg-3"><Link css={linkStyle}>ABOUT</Link></li>
+            <li className="h5 text-center text-lg-left mx-lg-3"><Link css={linkStyle}>DESIGNS</Link></li>
+            <li className="h5 text-center text-lg-left mx-lg-3"><Link css={linkStyle}>SHOP</Link></li>
           </UnorderedList>
         </NavLinksContainer>
       </NavBar>

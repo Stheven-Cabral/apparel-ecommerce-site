@@ -8,6 +8,7 @@ import Image from 'react-bootstrap/Image';
 
 const heroStyleMobile = css`
   width: 100vw;
+  margin-top: 60px;
   @media(min-width: 576px) {
     display: none;
   }
