@@ -18,8 +18,6 @@ const Home = () => {
   return(
     <React.Fragment>
       <NavigationBar />
-      {/* <Container css={containerStyles}> */}
-      {/* </Container> */}
       <Hero />
     </React.Fragment>
   )

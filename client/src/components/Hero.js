@@ -7,14 +7,13 @@ import Image from 'react-bootstrap/Image';
 import ShopButton from './ShopButton';
 
 const containerStyle = css`
-position: fixed; 
   z-index: 0;
 `;
 
 
 const heroStyleMobile = css`
   width: 100vw;
-  padding-top: 60px;
+  padding-top: 40px;
   @media(min-width: 576px) {
     display: none;
   }
@@ -32,13 +31,11 @@ const heroStyle = css`
 const Hero = () => {
   return(
     <React.Fragment>
-      <div css={containerStyle}>
-        <div className="position-relative">
-          <Image css={heroStyleMobile} src={MangoesMobile} alt="Collection of Mangoes" fluid></Image>
-          <Image css={heroStyle} src={Mangoes} alt="Collection of Mangoes" fluid></Image>
-          <ShopButton text="SHOP" />
-        </div>
-      </div>    
+      <div css={containerStyle} className="position-relative">
+        <Image css={heroStyleMobile} src={MangoesMobile} alt="Collection of Mangoes" fluid></Image>
+        <Image css={heroStyle} src={Mangoes} alt="Collection of Mangoes" fluid></Image>
+        <ShopButton text="SHOP" />
+      </div>
     </React.Fragment>
   )
 }
