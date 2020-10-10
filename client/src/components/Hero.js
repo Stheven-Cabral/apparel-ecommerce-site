@@ -4,12 +4,17 @@ import MangoesMobile from '../images/mango-hero-bg-mobile.png';
 import Mangoes from '../images/mango-hero-bg.png';
 import { jsx, css } from '@emotion/core';
 import Image from 'react-bootstrap/Image';
-import Button from './Button';
+import ShopButton from './ShopButton';
+
+const containerStyle = css`
+position: fixed; 
+  z-index: 0;
+`;
 
 
 const heroStyleMobile = css`
   width: 100vw;
-  margin-top: 60px;
+  padding-top: 60px;
   @media(min-width: 576px) {
     display: none;
   }
@@ -25,14 +30,14 @@ const heroStyle = css`
 
 
 const Hero = () => {
-
   return(
     <React.Fragment>
-      <div>
-        <Image css={heroStyleMobile} src={MangoesMobile} alt="Collection of Mangoes" fluid></Image>
-        <Image css={heroStyle} src={Mangoes} alt="Collection of Mangoes" fluid></Image>
-        <Button text="SHOP" />
-        <Button text="DESIGNS" />
+      <div css={containerStyle}>
+        <div className="position-relative">
+          <Image css={heroStyleMobile} src={MangoesMobile} alt="Collection of Mangoes" fluid></Image>
+          <Image css={heroStyle} src={Mangoes} alt="Collection of Mangoes" fluid></Image>
+          <ShopButton text="SHOP" />
+        </div>
       </div>    
     </React.Fragment>
   )
