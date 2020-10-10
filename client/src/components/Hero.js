@@ -4,6 +4,7 @@ import MangoesMobile from '../images/mango-hero-bg-mobile.png';
 import Mangoes from '../images/mango-hero-bg.png';
 import { jsx, css } from '@emotion/core';
 import Image from 'react-bootstrap/Image';
+import Button from './Button';
 
 
 const heroStyleMobile = css`
@@ -27,8 +28,12 @@ const Hero = () => {
 
   return(
     <React.Fragment>
-      <Image css={heroStyleMobile} src={MangoesMobile} alt="Collection of Mangoes" fluid></Image>
-      <Image css={heroStyle} src={Mangoes} alt="Collection of Mangoes" fluid></Image>
+      <div>
+        <Image css={heroStyleMobile} src={MangoesMobile} alt="Collection of Mangoes" fluid></Image>
+        <Image css={heroStyle} src={Mangoes} alt="Collection of Mangoes" fluid></Image>
+        <Button text="SHOP" />
+        <Button text="DESIGNS" />
+      </div>    
     </React.Fragment>
   )
 }
