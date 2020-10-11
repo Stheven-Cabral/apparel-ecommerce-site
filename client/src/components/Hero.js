@@ -5,6 +5,7 @@ import Mangoes from '../images/mango-hero-bg.png';
 import { jsx, css } from '@emotion/core';
 import Image from 'react-bootstrap/Image';
 import ShopButton from './ShopButton';
+import DesignButton from './DesignButton';
 
 const containerStyle = css`
   z-index: 0;
@@ -35,6 +36,7 @@ const Hero = () => {
         <Image css={heroStyleMobile} src={MangoesMobile} alt="Collection of Mangoes" fluid></Image>
         <Image css={heroStyle} src={Mangoes} alt="Collection of Mangoes" fluid></Image>
         <ShopButton text="SHOP" />
+        <DesignButton text="DESIGN" />
       </div>
     </React.Fragment>
   )

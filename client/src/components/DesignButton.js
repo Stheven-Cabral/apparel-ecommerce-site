@@ -9,12 +9,12 @@ export const buttonStyle = css`
   border-radius: 48px;
   background-color: transparent;
   position: absolute;
-  top: 68%;
+  top: 83%;
   left: 50%;
   transform: translate(-50%);
 `;
 
-const ShopButton = (props) => {
+const DesignButton = (props) => {
   return (
     <React.Fragment>
       <button css={buttonStyle}>{props.text}</button>
@@ -22,4 +22,5 @@ const ShopButton = (props) => {
   )
 }
 
-export default ShopButton;
+
+export default DesignButton;
