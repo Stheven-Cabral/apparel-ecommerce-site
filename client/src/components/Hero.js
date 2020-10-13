@@ -2,6 +2,7 @@
 import React from 'react';
 import MangoesMobile from '../images/mango-hero-bg-mobile.png';
 import Mangoes from '../images/mango-hero-bg.png';
+import mangoLogoWhite from '../svgs/mangologo-white.svg';
 import { jsx, css } from '@emotion/core';
 import Image from 'react-bootstrap/Image';
 import ShopButton from './ShopButton';
@@ -28,6 +29,14 @@ const heroStyle = css`
   }
 `;
 
+const logoStyle = css`
+  width: 250px;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%);
+`;
+
 
 const Hero = () => {
   return(
@@ -35,6 +44,7 @@ const Hero = () => {
       <div css={containerStyle} className="position-relative">
         <Image css={heroStyleMobile} src={MangoesMobile} alt="Collection of Mangoes" fluid></Image>
         <Image css={heroStyle} src={Mangoes} alt="Collection of Mangoes" fluid></Image>
+        <Image css={logoStyle} src={mangoLogoWhite} alt="White Wild Mangoes Logo" fluid></Image>
         <ShopButton text="SHOP" />
         <DesignButton text="DESIGN" />
       </div>
