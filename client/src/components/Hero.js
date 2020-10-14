@@ -45,6 +45,7 @@ const Hero = () => {
         <Image css={heroStyleMobile} src={MangoesMobile} alt="Collection of Mangoes" fluid></Image>
         <Image css={heroStyle} src={Mangoes} alt="Collection of Mangoes" fluid></Image>
         <Image css={logoStyle} src={mangoLogoWhite} alt="White Wild Mangoes Logo" fluid></Image>
+        <p></p>
         <ShopButton text="SHOP" />
         <DesignButton text="DESIGNS" />
       </div>
