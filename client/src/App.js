@@ -4,16 +4,20 @@ import Overlay from './components/Overlay';
 import Home from './components/Home';
 import './index.css';
 import Normalize from 'react-normalize';
+import { Provider } from './Context';
 
 function App() {
   return (
-    <Router>
-      <Normalize />
-      <Switch>
-        <Route exact path="/" component={Overlay} />
-        <Route path="/home" component={Home} />
-      </Switch>
-    </Router>
+    <Provider>
+      <Router>
+        <Normalize />
+        <Switch>
+          <Route exact path="/" component={Overlay} />
+          <Route path="/home" component={Home} />
+        </Switch>
+      </Router>
+    </Provider>
+    
   );
 }
 
