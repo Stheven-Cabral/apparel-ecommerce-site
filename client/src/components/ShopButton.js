@@ -3,15 +3,21 @@ import React from 'react';
 import { jsx, css } from '@emotion/core';
 
 export const buttonStyle = css`
-  width: 180px;
-  height: 75px;
+  width: 175px;
+  height: 60px;
   border: 5px solid #f3dd19;
   border-radius: 48px;
   background-color: transparent;
   position: absolute;
-  top: 68%;
+  top: 75%;
   left: 50%;
   transform: translate(-50%);
+  color: white;
+  font-family: 'Bebas Neue', cursive;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 1.3em;
+  font-weight: 100;
+  letter-spacing: 6px;
 `;
 
 const ShopButton = (props) => {

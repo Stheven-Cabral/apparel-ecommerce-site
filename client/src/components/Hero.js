@@ -46,7 +46,7 @@ const Hero = () => {
         <Image css={heroStyle} src={Mangoes} alt="Collection of Mangoes" fluid></Image>
         <Image css={logoStyle} src={mangoLogoWhite} alt="White Wild Mangoes Logo" fluid></Image>
         <ShopButton text="SHOP" />
-        <DesignButton text="DESIGN" />
+        <DesignButton text="DESIGNS" />
       </div>
     </React.Fragment>
   )
