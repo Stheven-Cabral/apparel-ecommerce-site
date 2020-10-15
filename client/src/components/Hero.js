@@ -30,13 +30,29 @@ const heroStyle = css`
 `;
 
 const logoStyle = css`
-  width: 93%;
+  width: 365px;
   position: absolute;
   top: 14%;
   left: 52%;
   transform: translate(-50%);
   @media (min-width: 576px) {
     display: none;
+  }
+`;
+
+const buttonsContainerStyle = css`
+  text-decoration: none;
+  position: absolute;
+  top: 78%;
+  left: 50%;
+  transform: translate(-50%);
+  display: flex;
+  flex-direction: column;
+  @media (min-width: 576px) {
+    top: 63%;
+    width:  65%;
+    flex-direction: row;
+    justify-content: space-around;
   }
 `;
 
@@ -48,7 +64,7 @@ const heroTextContainerStyle = css`
   transform: translate(-50%);
   color: white;
   @media (min-width: 576px) {
-    top: 44%;
+    top: 37%;
     width: 90%;
   }
 `;
@@ -82,8 +98,10 @@ const Hero = () => {
         <div css={heroTextContainerStyle}>
           <p className="text-white" css={heroTextStyle}>SWEET LOOKING SHIRTS WITH A <span css={mangoTextStyle}>wild</span> TWIST</p>
         </div>
-        <ShopButton text="SHOP" />
-        <DesignButton text="DESIGNS" />
+        <div css={buttonsContainerStyle}>
+          <ShopButton text="SHOP" />
+          <DesignButton text="DESIGNS" />
+        </div>
       </div>
     </React.Fragment>
   )

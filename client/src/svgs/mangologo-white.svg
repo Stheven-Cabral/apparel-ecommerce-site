@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <svg viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg" xmlns:bx="https://boxy-svg.com">
   <defs>
-    <filter id="drop-shadow-filter-0" x="-500%" y="-500%" width="1000%" height="1000%" bx:preset="drop-shadow 1 5 5 0 0.5 rgba(255,229,0,0.42)">
+    <filter id="drop-shadow-filter-0" x="-500%" y="-500%" width="1000%" height="1000%" bx:preset="drop-shadow 1 6 5 0 0.7 rgba(255,229,0,1)">
       <feGaussianBlur in="SourceAlpha" stdDeviation="0"/>
-      <feOffset dx="5" dy="5"/>
+      <feOffset dx="6" dy="5"/>
       <feComponentTransfer result="offsetblur">
-        <feFuncA id="spread-ctrl" type="linear" slope="1"/>
+        <feFuncA id="spread-ctrl" type="linear" slope="1.4"/>
       </feComponentTransfer>
-      <feFlood flood-color="rgba(255,229,0,0.42)"/>
+      <feFlood flood-color="rgba(255,229,0,1)"/>
       <feComposite in2="offsetblur" operator="in"/>
       <feMerge>
         <feMergeNode/>
