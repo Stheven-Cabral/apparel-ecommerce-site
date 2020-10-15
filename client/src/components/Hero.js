@@ -23,7 +23,7 @@ const heroStyleMobile = css`
 
 const heroStyle = css`
   display: none;
-  width: 100vw;
+  padding-top: 64px;
   @media(min-width: 576px) {
     display: block;
   }
@@ -35,6 +35,9 @@ const logoStyle = css`
   top: 14%;
   left: 52%;
   transform: translate(-50%);
+  @media (min-width: 576px) {
+    display: none;
+  }
 `;
 
 const heroTextContainerStyle = css`
@@ -44,6 +47,10 @@ const heroTextContainerStyle = css`
   left: 50%;
   transform: translate(-50%);
   color: white;
+  @media (min-width: 576px) {
+    top: 44%;
+    width: 90%;
+  }
 `;
 
 const heroTextStyle = css`
@@ -53,7 +60,11 @@ const heroTextStyle = css`
   font-weight: 100;
   letter-spacing: 6px;
   text-align: center;
-  line-height: 
+  line-height: 30px;
+  @media (min-width: 576px) {
+    font-size: 2em;
+    text-shadow: 2px 2px rgb(0,0,0, 0.5);
+  } 
 `;
 
 const mangoTextStyle = css`
