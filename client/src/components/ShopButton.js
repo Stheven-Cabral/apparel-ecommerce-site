@@ -17,6 +17,12 @@ export const buttonStyle = css`
   font-size: 1.3em;
   font-weight: 100;
   letter-spacing: 6px;
+  &:hover {
+    background-color: #f3dd19;
+  }
+  &:focus {
+    outline: none;
+  }
 `;
 
 const ShopButton = (props) => {
