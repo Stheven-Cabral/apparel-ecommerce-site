@@ -32,7 +32,7 @@ const heroStyle = css`
 const logoStyle = css`
   width: 93%;
   position: absolute;
-  top: 15%;
+  top: 14%;
   left: 52%;
   transform: translate(-50%);
 `;
@@ -40,7 +40,7 @@ const logoStyle = css`
 const heroTextContainerStyle = css`
   position: absolute;
   width: 300px;
-  top: 65%;
+  top: 64%;
   left: 50%;
   transform: translate(-50%);
   color: white;
@@ -57,7 +57,8 @@ const heroTextStyle = css`
 `;
 
 const mangoTextStyle = css`
-  font-family: 'Bebas Neue', cursive;
+  font-family: 'Kaushan Script', cursive;
+  color: #f3dd19;
 `;
 
 const Hero = () => {

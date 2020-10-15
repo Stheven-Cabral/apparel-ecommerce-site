@@ -69,7 +69,7 @@ const toggleButtonStyle = css`
 
 const NavLinksContainer = styled.div`
   width: 100%;
-  height: 200px;
+  height: 225px;
   padding-top: 50px;
   background-color: #1F1F1F;
   position: absolute;
