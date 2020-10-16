@@ -111,7 +111,6 @@ const linkStyle = css`
   @media (min-width: 992px) {
     font-size: 1.1em;
     font-weight: 100px;
-    margin-left: 7px;
     padding-top: 6px;
   }
 `;
