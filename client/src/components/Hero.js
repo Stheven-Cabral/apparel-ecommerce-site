@@ -4,6 +4,7 @@ import MangoesMobile from '../images/mango-hero-bg-mobile.png';
 import Mangoes from '../images/mango-hero-bg.png';
 import mangoLogoWhite from '../svgs/mangologo-white.svg';
 import { jsx, css } from '@emotion/core';
+import styled from '@emotion/styled';
 import Image from 'react-bootstrap/Image';
 import ShopButton from './ShopButton';
 import DesignButton from './DesignButton';
@@ -56,7 +57,7 @@ const buttonsContainerStyle = css`
   }
 `;
 
-const heroTextContainerStyle = css`
+const HeroTextContainer = styled.div`
   position: absolute;
   width: 300px;
   top: 64%;
@@ -96,6 +97,9 @@ const mangoTextStyle = css`
   color: #f3dd19;
 `;
 
+const LogoContainer = styled(HeroTextContainer)`
+`;
+
 const Hero = () => {
   return(
     <React.Fragment>
@@ -103,9 +107,12 @@ const Hero = () => {
         <Image css={heroStyleMobile} src={MangoesMobile} alt="Collection of Mangoes" fluid></Image>
         <Image css={heroStyle} src={Mangoes} alt="Collection of Mangoes" fluid></Image>
         <Image css={logoStyle} src={mangoLogoWhite} alt="White Wild Mangoes Logo" fluid></Image>
-        <div css={heroTextContainerStyle}>
+        <LogoContainer>
+          <p className="text-white">Wild <span css={mangoTextStyle}>Mangoes</span></p>
+        </LogoContainer>
+        {/* <HeroTextContainer>
           <p className="text-white" css={heroTextStyle}>SWEET LOOKING SHIRTS WITH A <span css={mangoTextStyle}>wild</span> TWIST</p>
-        </div>
+        </HeroTextContainer> */}
         <div css={buttonsContainerStyle}>
           <ShopButton text="SHOP" />
           <DesignButton text="DESIGNS" />
