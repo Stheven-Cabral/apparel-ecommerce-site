@@ -24,6 +24,10 @@ const navBarStyle = css`
   position: absolute;
   z-index: 2;
   background-color: #1F1F1F;
+  @media(min-width: 992px) {
+    height: 70px;
+  }
+  
 `;
 
 const brandStyle = css`
@@ -32,15 +36,9 @@ const brandStyle = css`
   top: 50%;
   left: 50%;
   transform: translate(-60%);
-`;
-
-const textStyle = css`
-  line-height: 60px;
-  margin-block-start: 0;
-  margin-block-end: 0;
-  font-size: 1.7em;
-  font-family: 'Kaushan Script', cursive;
-  color: #f8f8f8;
+  @media(min-width: 992px) {
+    display: none;
+  }
 `;
 
 const toggleStyle = css`
@@ -77,6 +75,9 @@ const NavLinksContainer = styled.div`
   top: 60px;
   transform: ${({visibleNav}) => visibleNav ? 'translateX(0%)' : 'translateX(-100%)'};
   transition: transform .3s ease;
+  @media (min-width: 768px) {
+    height: 275px;
+  }
   @media(min-width: 992px) {
     height: 65px;
     left: 0px;
@@ -103,9 +104,35 @@ const linkStyle = css`
   &:hover {
     color: #f3dd19;
   }
+  @media (min-width: 768px) {
+    font-size: 1.5em;
+    font-weight: 200px;
+  } 
+  @media (min-width: 992px) {
+    font-size: 1.1em;
+    font-weight: 100px;
+    margin-left: 7px;
+    padding-top: 6px;
+  }
 `;
 
-const mangoesStyle = css`
+const brandTextStyle = css`
+  line-height: 60px;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  font-size: 1.7em;
+  font-family: 'Kaushan Script', cursive;
+  color: #f8f8f8;
+  @media (min-width: 768px) {
+    font-size: 1.9em;
+  }
+  @media(min-width: 992px) {
+    line-height: 70px;
+    padding-left: 10px;
+  } 
+`;
+
+const mangoesTextStyle = css`
   color: #f3dd19;
 `;
 
@@ -118,6 +145,10 @@ const shoppingCartButtonStyle = css`
   z-index: 4;
   right: 17px;
   top: 5px;
+  @media (min-width: 992px) {
+    margin-right: 10px;
+    height: 65px;
+  }
 `;
 
 /**Navigation Bar Component */
@@ -137,7 +168,7 @@ const NavigationBar = () => {
           </UnorderedList>
         </NavLinksContainer>
       </NavBar>
-      <div css={brandStyle}><h1 css={textStyle}>Wild<span css={mangoesStyle}>&nbsp;Mangoes</span></h1></div>
+      <div css={brandStyle}><h1 css={brandTextStyle}>Wild<span css={mangoesTextStyle}>&nbsp;Mangoes</span></h1></div>
       <button css={shoppingCartButtonStyle}><img src={shoppingCart} alt="Shopping Cart"/></button>
     </Container>
   )

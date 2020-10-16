@@ -19,6 +19,12 @@ export const buttonStyle = css`
   &:focus {
     outline: none;
   }
+  @media (min-width: 576px) {
+    width: 180px;
+    height: 60px;
+    font-size: 1.6em;
+    text-shadow: 2px 2px rgb(0,0,0, 0.5);
+  } 
 `;
 
 const ShopButton = (props) => {

@@ -22,6 +22,12 @@ export const buttonStyle = css`
   }
   @media(min-width: 576px) {
     margin-top: 0px;
+    @media (min-width: 768px) {
+    width: 180px;
+    height: 60px;
+    font-size: 1.6em;
+    text-shadow: 2px 2px rgb(0,0,0, 0.5);
+  } 
   }
 `;
 

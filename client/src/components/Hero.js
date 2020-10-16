@@ -50,7 +50,7 @@ const buttonsContainerStyle = css`
   flex-direction: column;
   @media (min-width: 576px) {
     top: 63%;
-    width:  65%;
+    width: 65%;
     flex-direction: row;
     justify-content: space-around;
   }
@@ -67,6 +67,9 @@ const heroTextContainerStyle = css`
     top: 37%;
     width: 90%;
   }
+  @media (min-width: 768px) {
+    width: 75%;
+  }
 `;
 
 const heroTextStyle = css`
@@ -80,7 +83,12 @@ const heroTextStyle = css`
   @media (min-width: 576px) {
     font-size: 2em;
     text-shadow: 2px 2px rgb(0,0,0, 0.5);
-  } 
+  }
+  @media (min-width: 768px) {
+    font-size: 2.5em;
+    text-shadow: 2px 2px rgb(0,0,0, 0.5);
+    line-height: 40px;
+  }  
 `;
 
 const mangoTextStyle = css`
