@@ -73,7 +73,7 @@ const HeroTextContainer = styled.div`
   }
 `;
 
-const heroTextStyle = css`
+const HeroText = styled.p`
   color: white;
   font-family: 'Bebas Neue', cursive;
   font-size: 1.3em;
@@ -98,6 +98,11 @@ const mangoTextStyle = css`
 `;
 
 const LogoContainer = styled(HeroTextContainer)`
+  display: none;
+  font-size: 5em;
+`;
+
+const Logo = styled(HeroText)`
 `;
 
 const Hero = () => {
@@ -108,11 +113,11 @@ const Hero = () => {
         <Image css={heroStyle} src={Mangoes} alt="Collection of Mangoes" fluid></Image>
         <Image css={logoStyle} src={mangoLogoWhite} alt="White Wild Mangoes Logo" fluid></Image>
         <LogoContainer>
-          <p className="text-white">Wild <span css={mangoTextStyle}>Mangoes</span></p>
+          <Logo className="text-white">Wild <span css={mangoTextStyle}>Mangoes</span></Logo>
         </LogoContainer>
-        {/* <HeroTextContainer>
-          <p className="text-white" css={heroTextStyle}>SWEET LOOKING SHIRTS WITH A <span css={mangoTextStyle}>wild</span> TWIST</p>
-        </HeroTextContainer> */}
+        <HeroTextContainer>
+          <HeroText className="text-white">SWEET LOOKING SHIRTS WITH A <span css={mangoTextStyle}>wild</span> TWIST</HeroText>
+        </HeroTextContainer>
         <div css={buttonsContainerStyle}>
           <ShopButton text="SHOP" />
           <DesignButton text="DESIGNS" />
