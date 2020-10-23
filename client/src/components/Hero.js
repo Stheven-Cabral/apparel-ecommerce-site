@@ -103,6 +103,7 @@ const LogoContainer = styled(HeroTextContainer)`
 `;
 
 const Logo = styled(HeroText)`
+  text-shadow: 2px 2px 2px black;
 `;
 
 const Hero = () => {
