@@ -55,6 +55,9 @@ const buttonsContainerStyle = css`
     flex-direction: row;
     justify-content: space-around;
   }
+  @media (min-width: 992px) {
+    top: 73%;
+  }
 `;
 
 const HeroTextContainer = styled.div`
@@ -100,6 +103,9 @@ const mangoTextStyle = css`
 const LogoContainer = styled(HeroTextContainer)`
   display: none;
   font-size: 5em;
+  @media (min-width: 992px) {
+    display: block;
+  }
 `;
 
 const Logo = styled(HeroText)`
