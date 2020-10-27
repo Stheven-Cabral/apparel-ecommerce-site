@@ -7,6 +7,7 @@ import { jsx } from '@emotion/core';import React from 'react';
 import 'animate.css';
 import NavigationBar from './NavBar';
 import Hero from './Hero';
+import About from './About';
 // import Container from 'react-bootstrap/Container';
 
 
@@ -19,6 +20,7 @@ const Home = () => {
     <React.Fragment>
       <NavigationBar />
       <Hero />
+      <About />
     </React.Fragment>
   )
 }
