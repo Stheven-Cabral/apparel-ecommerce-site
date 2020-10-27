@@ -125,7 +125,7 @@ const Hero = () => {
         <Image css={heroStyle} src={Mangoes} alt="Collection of Mangoes" fluid></Image>
         <Image css={logoStyle} src={mangoLogoWhite} alt="White Wild Mangoes Logo" fluid></Image>
         <LogoContainer>
-          <Logo className="text-white">Wild Mangoes</Logo>
+          <Logo className="text-white">Wild <span css={mangoTextStyle}>Mangoes</span></Logo>
         </LogoContainer>
         <HeroTextContainer>
           <HeroText className="text-white">SWEET LOOKING SHIRTS WITH A <span css={mangoTextStyle}>wild</span> TWIST</HeroText>
