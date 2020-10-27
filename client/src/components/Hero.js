@@ -74,6 +74,9 @@ const HeroTextContainer = styled.div`
   @media (min-width: 768px) {
     width: 75%;
   }
+  @media (min-width: 992px) {
+    top: 55%;
+  }
 `;
 
 const HeroText = styled.p`
@@ -102,14 +105,16 @@ const mangoTextStyle = css`
 
 const LogoContainer = styled(HeroTextContainer)`
   display: none;
-  font-size: 5em;
+  font-size: 2em;
   @media (min-width: 992px) {
     display: block;
+    top: 25%;
   }
 `;
 
 const Logo = styled(HeroText)`
   text-shadow: 2px 2px 2px black;
+  font-family: 'Kaushan Script', cursive;
 `;
 
 const Hero = () => {
@@ -120,7 +125,7 @@ const Hero = () => {
         <Image css={heroStyle} src={Mangoes} alt="Collection of Mangoes" fluid></Image>
         <Image css={logoStyle} src={mangoLogoWhite} alt="White Wild Mangoes Logo" fluid></Image>
         <LogoContainer>
-          <Logo className="text-white">Wild <span css={mangoTextStyle}>Mangoes</span></Logo>
+          <Logo className="text-white">Wild Mangoes</Logo>
         </LogoContainer>
         <HeroTextContainer>
           <HeroText className="text-white">SWEET LOOKING SHIRTS WITH A <span css={mangoTextStyle}>wild</span> TWIST</HeroText>
