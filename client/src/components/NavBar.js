@@ -26,8 +26,7 @@ const navBarStyle = css`
   background-color: #1F1F1F;
   @media(min-width: 992px) {
     height: 70px;
-  }
-  
+  }  
 `;
 
 const brandStyle = css`
@@ -39,6 +38,26 @@ const brandStyle = css`
   @media(min-width: 992px) {
     display: none;
   }
+`;
+
+const brandTextStyle = css`
+  line-height: 60px;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  font-size: 1.7em;
+  font-family: 'Kaushan Script', cursive;
+  color: #f8f8f8;
+  @media (min-width: 768px) {
+    font-size: 1.9em;
+  }
+  @media(min-width: 992px) {
+    line-height: 70px;
+    padding-left: 10px;
+  } 
+`;
+
+const mangoesTextStyle = css`
+  color: #f3dd19;
 `;
 
 const toggleStyle = css`
@@ -115,26 +134,6 @@ const linkStyle = css`
   }
 `;
 
-const brandTextStyle = css`
-  line-height: 60px;
-  margin-block-start: 0;
-  margin-block-end: 0;
-  font-size: 1.7em;
-  font-family: 'Kaushan Script', cursive;
-  color: #f8f8f8;
-  @media (min-width: 768px) {
-    font-size: 1.9em;
-  }
-  @media(min-width: 992px) {
-    line-height: 70px;
-    padding-left: 10px;
-  } 
-`;
-
-const mangoesTextStyle = css`
-  color: #f3dd19;
-`;
-
 const shoppingCartButtonStyle = css`
   background-color: transparent;
   border: none;
@@ -167,7 +166,9 @@ const NavigationBar = () => {
           </UnorderedList>
         </NavLinksContainer>
       </NavBar>
-      <div css={brandStyle}><h1 css={brandTextStyle}>Wild<span css={mangoesTextStyle}>&nbsp;Mangoes</span></h1></div>
+      <div css={brandStyle}>
+        <h1 css={brandTextStyle}>Wild<span css={mangoesTextStyle}>&nbsp;Mangoes</span></h1>
+      </div>
       <button css={shoppingCartButtonStyle}><img src={shoppingCart} alt="Shopping Cart"/></button>
     </Container>
   )

@@ -75,7 +75,7 @@ const HeroTextContainer = styled.div`
     width: 75%;
   }
   @media (min-width: 992px) {
-    top: 55%;
+    top: 52%;
   }
 `;
 
@@ -108,13 +108,14 @@ const LogoContainer = styled(HeroTextContainer)`
   font-size: 2em;
   @media (min-width: 992px) {
     display: block;
-    top: 25%;
+    top: 28%;
   }
 `;
 
 const Logo = styled(HeroText)`
   text-shadow: 2px 2px 2px black;
   font-family: 'Kaushan Script', cursive;
+  letter-spacing: 3px;
 `;
 
 const Hero = () => {
