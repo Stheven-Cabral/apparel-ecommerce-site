@@ -11,7 +11,6 @@ import shoppingCart from '../svgs/shopping-cart.svg';
 
 /** Navigation Bar Component Styling */
 const containerStyle = css`
-  max-width: 1200px;
   padding: 0;
   position: sticky;
   top: 0;
@@ -111,8 +110,11 @@ const UnorderedList = styled.ul`
   padding: 0px;
   @media (min-width: 992px) {
     position: absolute;
-    top: 20px;
+    top: 22px;
     background-color: transparent;
+  }
+  @media (min-width: 1200px) {
+    padding-left: 45px;
   }
 `;
 
@@ -132,6 +134,9 @@ const linkStyle = css`
     font-weight: 100px;
     padding-top: 6px;
   }
+  @media (min-width: 1200px) {
+    font-size: 1.2em;
+  }
 `;
 
 const shoppingCartButtonStyle = css`
@@ -146,6 +151,10 @@ const shoppingCartButtonStyle = css`
   @media (min-width: 992px) {
     margin-right: 10px;
     height: 65px;
+  }
+  @media (min-width: 1200px) {
+    margin-right: 50px;
+    width: 60px;
   }
 `;
 

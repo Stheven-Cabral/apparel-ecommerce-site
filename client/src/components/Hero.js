@@ -58,6 +58,9 @@ const buttonsContainerStyle = css`
   @media (min-width: 992px) {
     top: 73%;
   }
+  @media (min-width: 1200px) {
+    justify-content: center;
+  }
 `;
 
 const HeroTextContainer = styled.div`

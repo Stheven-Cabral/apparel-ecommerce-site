@@ -24,6 +24,9 @@ export const buttonStyle = css`
     height: 60px;
     font-size: 1.6em;
     text-shadow: 2px 2px rgb(0,0,0, 0.5);
+  }
+  @media (min-width: 1200px) {
+    margin: 0px 50px;
   } 
 `;
 
