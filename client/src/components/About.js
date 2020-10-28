@@ -19,7 +19,7 @@ const About = () => {
   return(
     <React.Fragment>
       <div>
-        <h1>About Wild Mangoes</h1>
+        <h1>The Beginning</h1>
         <p>Born from a passion for style, art, and urban design, Wild Mangoes was birthed in order to express ones self.</p>
       </div>
   </React.Fragment>

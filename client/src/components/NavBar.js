@@ -19,7 +19,7 @@ const containerStyle = css`
 
 const navBarStyle = css`
   width: 100%;
-  height: 65px;
+  height: 66px;
   position: absolute;
   z-index: 2;
   background-color: #1F1F1F;
