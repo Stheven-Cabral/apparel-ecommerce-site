@@ -17,11 +17,16 @@ const AboutContainer = styled.div`
 `;
 
 const titleContainer = css`
-  background-color: yellow;
+  background-color: #f3dd19;
+  height: 60px;
+  
 `;
 
 const titleStyle = css`
   font-family: 'Bebas Neue', cursive;
+  font-family: 'Kaushan Script', cursive;
+  margin: 2px 10px;
+  line-height: 60px;
 `;
 
 
