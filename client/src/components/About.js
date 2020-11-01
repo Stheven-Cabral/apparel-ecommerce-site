@@ -11,11 +11,14 @@ import MangoesPattern from '../images/mango-silhouette-pattern.png';
 // import DesignButton from './DesignButton';
 
 const AboutContainer = styled.div`
-  background-image: url(`${MangoesPattern}`);
+  background-image: url(${MangoesPattern});
+  background-size: cover;
+  background-position: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 50px 0px;
+  margin: 10px 0px;
+  padding: 50px 0px;
 `;
 
 const titleContainer = css`
