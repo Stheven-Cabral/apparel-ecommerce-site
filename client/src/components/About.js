@@ -5,11 +5,13 @@ import React from 'react';
 // import mangoLogoWhite from '../svgs/mangologo-white.svg';
 import { jsx, css } from '@emotion/core';
 import styled from '@emotion/styled';
+import MangoesPattern from '../images/mango-silhouette-pattern.png';
 // import Image from 'react-bootstrap/Image';
 // import ShopButton from './ShopButton';
 // import DesignButton from './DesignButton';
 
 const AboutContainer = styled.div`
+  background-image: url(`${MangoesPattern}`);
   display: flex;
   flex-direction: column;
   align-items: center;
