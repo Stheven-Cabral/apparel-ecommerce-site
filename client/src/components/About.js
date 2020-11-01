@@ -16,7 +16,7 @@ const AboutContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 50px 0px;
+  padding: 100px 0px;
 `;
 
 const titleContainer = css`
@@ -26,7 +26,7 @@ const titleContainer = css`
 
 const titleStyle = css`
   font-family: 'Kaushan Script', cursive;
-  font-size: 1.75em;
+  font-size: 1.8em;
   margin: 2px 10px;
   line-height: 60px;
   text-decoration: underline;
@@ -39,7 +39,9 @@ const aboutTextContainer = css`
 `;
 
 const aboutText = css`
-  font-family: 'Bebas Neue', cursive;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 500;
+  font-size: 1.2em;
 `;
 
 const About = () => {
