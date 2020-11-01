@@ -13,16 +13,13 @@ import MangoesPattern from '../images/mango-silhouette-pattern.png';
 const AboutContainer = styled.div`
   background-image: url(${MangoesPattern});
   background-size: cover;
-  background-position: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 10px 0px;
   padding: 50px 0px;
 `;
 
 const titleContainer = css`
-  ${'' /* background-color: #f3dd19; */}
   height: 60px;
   
 `;
@@ -46,7 +43,7 @@ const About = () => {
           <h1 css={titleStyle}>The Beginning</h1>
         </div>
         
-        <p>Born from a passion for style, art, and urban design, Wild Mangoes was birthed in order to express ones self.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
       </AboutContainer>
   </React.Fragment>
   )
